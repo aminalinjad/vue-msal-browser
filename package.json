@@ -1,0 +1,50 @@
+{
+  "name": "msal-vue2",
+  "version": "0.2.2",
+  "private": false,
+  "author": "Amin Alinejad",
+  "description": "Vue plugin for using Microsoft Authentication Library (MSAL)",
+  "maintainers": [
+    {
+      "name": "Amin Alinejad",
+      "email": "amin.anzd@gmail.com"
+    }
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "vue2",
+    "vue",
+    "msal",
+    "msal-browser",
+    "nuxt2",
+    "sso",
+    "authentication"
+  ],
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/msal-vue.umd.cjs",
+  "module": "./dist/msal-vue.js",
+  "files": [
+    "dist/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aminalinjad/vue-msal-browser.git"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "2.20.0"
+  },
+  "devDependencies": {
+    "vite": "^5.3.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
