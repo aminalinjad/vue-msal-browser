@@ -1,6 +1,6 @@
 {
   "name": "msal-vue2",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": false,
   "author": "Amin Alinejad",
   "description": "Vue plugin for using Microsoft Authentication Library (MSAL)",
