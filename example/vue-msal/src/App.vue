@@ -90,11 +90,12 @@ export default {
     return {
       drawer: false,
       group: null,
-      isUserLogin: false
+      isUserLogin: false,
     }
   },
   mounted() {
     this.isUserLogin = this.$msal.isAuth()
+    this.getToken()
   },
   methods: {
     loginWithPopup() {
@@ -107,6 +108,18 @@ export default {
         scopes: ["User.ReadWrite"],
       };
       this.$msal.loginRedirect(loginRequest)
+    },
+    getToken() {
+      const account = this.$msal.getAllAccounts()[0];
+
+      const silentRequest = {
+        scopes: ['openid', 'profile', 'email'], // Use the actual API scope
+        account: account
+      };
+
+      this.$msal.acquireTokenSilent(silentRequest).then(async response => {
+        console.log(response.token)
+    })
     },
     logout() {
       this.$msal.logoutPopup().then(() => {
